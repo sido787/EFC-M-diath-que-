@@ -1,0 +1,79 @@
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+header .navbar-brand {
+  letter-spacing: 0.03em;
+}
+
+.card {
+  border-radius: 0.75rem;
+}
+
+.film-card .poster-placeholder {
+  background: #aeafb1;
+  height: 350px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  letter-spacing: 0.08em;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  border-radius: 0.75rem 0.75rem 0 0;
+}
+
+.film-card {
+  border: none;
+  border-radius: 0.75rem;
+  box-shadow: 0 8px 18px rgba(15, 23, 42, 0.08);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+html, body {
+  background: linear-gradient(135deg, #e4d97d 0%, #d6e0f0 100%); 
+  }
+
+.film-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 30px rgba(15, 23, 42, 0.16);
+}
+
+.film-card .card-title {
+  font-weight: 700;
+}
+
+footer {
+  margin-top: auto;
+}
+
+.footer-list li {
+  cursor: pointer;
+  font-size: 0.9rem;
+  margin-bottom: 0.25rem;
+  transition: color 0.15s ease, transform 0.15s ease;
+}
+
+.footer-list li:hover {
+  color: #fd810d;
+  transform: translateX(3px);
+}
+
+footer .bi {
+  cursor: pointer;
+  transition: color 0.15s ease, transform 0.15s ease;
+}
+
+footer .bi:hover {
+  color: #fd810d;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+  main {
+    margin-top: 2rem;
+  }
+
+  .film-card .poster-placeholder {
+    height: 180px;
+  }
+}
