@@ -42,6 +42,7 @@ html, body {
   font-weight: 700;
 }
 
+
 footer {
   margin-top: auto;
 }
@@ -76,4 +77,30 @@ footer .bi:hover {
   .film-card .poster-placeholder {
     height: 180px;
   }
+}
+
+/* ----- responsive : tablet ----- */
+@media ( min-width: 768px ) and ( max-width: 1024px ) {
+  .film-card .poster-placeholder {
+    height: 220px;
+  }
+  #results .col-md-4 {
+    flex: 0 0 50%;
+    max-width: 50%;
+  } 
+}
+body {
+  font-size: 0.95rem;
+}
+.film-card {
+  width: 90%;
+  margin: 0 auto;
+}
+.poster-placeholder img {
+  max-height: 270px;
+  object-fit: cover;
+
+}
+.card-body {
+  font-size: 1rem;
 }
