@@ -1,24 +1,23 @@
-
 body {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 0.95rem;
 }
 
-header .navbar-brand {
-  letter-spacing: 0.03em;
+#results h2 {
+  font-weight: 900;
+  font-size: 3rem;
+  color: #ffffff;
+  text-shadow: #1a28f3 1px 1px 2px;
+  margin-bottom: 1.5rem;
 }
-
-.card {
-  border-radius: 0.75rem;
-}
-
+/* -------carte de film ------- */
 .film-card .poster-placeholder {
-  background: #aeafb1;
-  height: 350px;
+  background: #8c99b4;
+  height: 450px;
   display: flex;
   align-items: center;
   justify-content: center;
-  letter-spacing: 0.08em;
-  font-size: 0.75rem;
+  font-size: 0.9rem;
   text-transform: uppercase;
   border-radius: 0.75rem 0.75rem 0 0;
 }
@@ -26,20 +25,97 @@ header .navbar-brand {
 .film-card {
   border: none;
   border-radius: 0.75rem;
-  box-shadow: 0 8px 18px rgba(15, 23, 42, 0.08);
+  box-shadow: 0 8px 18px rgba(2, 247, 43, 0.08);
   transition: transform 0.15s ease, box-shadow 0.15s ease;
+  width: 100%;
+  margin: 0 auto;
 }
-html, body {
-  background: linear-gradient(135deg, #e4d97d 0%, #d6e0f0 100%); 
-  }
 
 .film-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 14px 30px rgba(15, 23, 42, 0.16);
+  box-shadow: 0 14px 30px rgb(255, 255, 255);
 }
 
-.film-card .card-title {
-  font-weight: 700;
+
+.card-body {
+  font-size: 1rem;
+}
+
+.poster-placeholder {
+  height: 260px;
+  background: #e99595;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  color: #6c757d;
+  overflow: hidden;
+}
+
+.poster-placeholder img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-image: url(img/3627076\ \(1\).png);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+
+header {
+  background: rgb(255, 217, 0) !important;
+  backdrop-filter: blur(15px);
+}
+
+header .navbar-brand {
+  font-size: 2.5rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  color: #ffffffd2 !important;
+  box-shadow: #ffe600 2px 2px 3px;
+}
+
+header .navbar-text {
+  font-size: 2rem;
+  opacity: 0.12;
+  color: #fffdfd;
+  box-shadow: #ffe600 1px 1px 2px;
+}
+
+section.mb-4 .card {
+  background: rgba(243, 235, 235, 0.9) !important;
+  border-radius: 10px;
+  padding: 30px;
+  position: relative;
+  z-index: 10; 
+  
+}
+
+section.mb-4 h1 {
+  font-size: 2.5rem !important;
+  color: #0c0c0c !important;
+  font-weight: 800 !important;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  background: linear-gradient(90deg , #ffd000, #9b8401);
+  
+}
+
+/* btn sch  */
+#searchBtn {
+  background-color: #61bb9d;
+  color: rgb(27, 15, 15);
+  padding: 20px 20px;
+  font-size: large;
 }
 
 
@@ -69,38 +145,65 @@ footer .bi:hover {
   transform: translateY(-2px);
 }
 
+/* ------- RESPONSIVE ------- */
 @media (max-width: 768px) {
   main {
     margin-top: 2rem;
   }
 
   .film-card .poster-placeholder {
-    height: 180px;
+    height: 220px;
   }
 }
 
-/* ----- responsive : tablet ----- */
-@media ( min-width: 768px ) and ( max-width: 1024px ) {
+/* ----- tablet ----- */
+@media (min-width: 768px) and (max-width: 1024px) {
   .film-card .poster-placeholder {
     height: 220px;
   }
+
   #results .col-md-4 {
     flex: 0 0 50%;
     max-width: 50%;
-  } 
+  }
 }
-body {
-  font-size: 0.95rem;
-}
-.film-card {
-  width: 90%;
-  margin: 0 auto;
-}
-.poster-placeholder img {
-  max-height: 270px;
-  object-fit: cover;
 
+/* ------- POSTERS ------- */
+.side-poster {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 320px;
+  border-radius: 1rem;
+  box-shadow: 0 8px 25px rgba(245, 243, 243, 0.65);
+  opacity: 0.85;
+           
+  object-fit: cover;
+  pointer-events: none; 
 }
-.card-body {
-  font-size: 1rem;
+
+.side-poster-right {
+  right: 2rem;
+}
+
+.side-poster-left {
+  left: 2rem;
+}
+
+header,
+main,
+footer {
+  position: relative;
+  z-index: 1;
+}
+
+.film-card p {
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+.film-card .card-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #ffae00;
+  
 }
